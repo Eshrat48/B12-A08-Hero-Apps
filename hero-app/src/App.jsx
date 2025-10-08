@@ -2,6 +2,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './components/Header'; // Import the Header component
+import Footer from './components/Footer'; // Import the Footer component
 import './App.css'; 
 
 // --- Dummy Components for Routing ---
@@ -36,14 +37,18 @@ const NotFound = () => (
 function App() {
   return (
     <Router>
-      <Header /> 
+      <Header />
       
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/apps" element={<Apps />} />
-        <Route path="/installation" element={<Installation />} />
-        <Route path="*" element={<NotFound />} />
-      </Routes>
+      <main>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/apps" element={<Apps />} />
+          <Route path="/installation" element={<Installation />} />
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+      </main>
+
+      <Footer />
     </Router>
   );
 }
