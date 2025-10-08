@@ -1,0 +1,93 @@
+/* Header.css */
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 40px;
+    background-color: #FFFFFF; 
+    border-bottom: 1px solid #eee;
+    width: 100%; 
+    box-sizing: border-box;
+}
+
+/* --- Logo Styling --- */
+.header-logo-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+.logo-image {
+    height: 40px; 
+    width: auto;
+    margin-right: 5px;
+}
+
+.logo-text {
+    font-size: 16px;
+    font-weight: bold;
+    background-image: linear-gradient(to right, #632EE3, #9F62F2);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+/* --- Navigation Styling --- */
+.header-nav {
+    display: flex;
+    gap: 25px; 
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #000000; 
+    padding-bottom: 3px; 
+    transition: color 0.2s;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.nav-link:hover {
+    color: #2e78ff;
+}
+
+/* Active Link Indication */
+.nav-link.active {
+    background-image: linear-gradient(to right, #632EE3, #9F62F2);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent; 
+    border-bottom: 2px solid #a46df0; 
+}
+
+/* --- Contribution Button Styling --- */
+.contribute-button {
+    display: flex;
+    align-items: center;
+    padding: 8px 15px;
+    border-radius: 5px;
+    background: linear-gradient(to right, #632EE3, #9F62F2); 
+    color: #FFFFFF;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s, box-shadow 0.2s; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); 
+}
+
+.contribute-button:hover {
+    background: linear-gradient(to right, #6a1ba5, #801a80); 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); 
+}
+
+.contribute-icon {
+    margin-right: 5px;
+    font-size: 18px; 
+    line-height: 1; 
+}
