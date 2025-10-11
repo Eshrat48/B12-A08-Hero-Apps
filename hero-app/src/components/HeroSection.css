@@ -1,0 +1,169 @@
+/* src/components/HeroSection.css */
+
+.hero-section {
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding-top: 50px; 
+}
+
+.hero-top-content {
+    max-width: 800px; 
+    margin-bottom: 30px; 
+}
+
+.hero-top-content h1 {
+    font-size: 72px; 
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: #001931;
+}
+
+.gradient-text {
+    background-image: linear-gradient(to right, #632EE3, #9F62F2);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.hero-subtitle {
+    font-size: 16px;
+    color: #627382;
+    font-weight: 400;
+    line-height: 2;
+    margin-bottom: 30px;
+}
+
+.app-badges {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.app-badge {
+    /* Base Button Styling */
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: background-color 0.3s, box-shadow 0.3s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Specific Google Play Style */
+.app-badge.google {
+    background-color: #212121; /* Dark background */
+    color: white;
+}
+
+/* Specific App Store Style */
+.app-badge.appstore {
+    background-color: #f7f7f7; /* Light background */
+    color: #333;
+    border: 1px solid #ddd;
+}
+
+.app-badge:hover {
+    box-shadow: 0 6px 12px rgba(28, 21, 86, 0.2);
+}
+
+.badge-icon {
+    font-size: 1.2rem;
+    margin-right: 8px;
+    line-height: 1; /* Helps vertical alignment */
+}
+
+/* --- Central Graphic Placeholder (USING BACKGROUND IMAGE) --- */
+/* --- Central Graphic Placeholder --- */
+.hero-graphic-placeholder {
+    width: 100%;
+    max-width: 800px; 
+    height: 550px; 
+    margin: 0 auto;
+    
+    /* **CRITICAL:** Use your combined graphic here */
+    background-image: url('../assets/hero.png'); 
+    background-size: contain; 
+    background-repeat: no-repeat;
+    background-position: center bottom; 
+    z-index: 10; 
+}
+
+/* --- Statistics Bar (Bottom Purple Section) --- */
+.hero-stats-bar {
+    background-color: #632EE3; /* Dark purple background */
+    color: white;
+    width: 100%;
+    /* Increased top padding to account for graphic overlap */
+    padding: 60px 20px; 
+    box-sizing: border-box;
+    position: relative; 
+    z-index: 5;
+}
+
+.stats-bar-title {
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-bottom: 40px;
+}
+
+.stats-grid {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; 
+    gap: 60px; 
+    max-width: 1200px; 
+    margin: 0 auto;
+}
+
+.stat-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 200px; 
+}
+
+.stat-number {
+    font-size: 3rem; 
+    font-weight: 800;
+    margin-bottom: 5px;
+}
+
+.stat-label {
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin-bottom: 5px;
+    opacity: 0.9;
+}
+
+.stat-change {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .hero-graphic-placeholder {
+        height: 400px; 
+        max-width: 100%;
+        margin-bottom: -100px; 
+    }
+    .hero-stats-bar {
+        padding-top: 130px; 
+    }
+    .hero-top-content h1 {
+        font-size: 2.2rem;
+    }
+    .stats-grid {
+        gap: 30px;
+    }
+    .stat-number {
+        font-size: 2rem;
+    }
+}

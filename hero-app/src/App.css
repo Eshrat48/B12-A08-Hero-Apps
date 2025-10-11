@@ -10,6 +10,9 @@ body {
     padding: 0;
 }
 
+/* General page content padding, if you use a .page-content wrapper */
 .page-content {
-    padding: 100px;
+    padding: 20px;
+    max-width: 1200px; /* Constrain general page content, but not the header/footer/hero */
+    margin: 0 auto;
 }
