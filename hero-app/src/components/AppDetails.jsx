@@ -5,7 +5,7 @@ import './AppDetails.css';
 
 // --- HELPER FUNCTIONS ---
 
-// Function to format numbers (e.g., 9000000 -> 9M, 150000 -> 150K)
+// Function to format numbers (e.g., 9000000 -> 9.0M, 54000 -> 54.0K)
 const formatNumber = (num) => {
     if (num >= 1000000) return (num / 1000000).toFixed(1) + 'M';
     if (num >= 1000) return (num / 1000).toFixed(1) + 'K';
@@ -18,7 +18,7 @@ const calculateRatingPercentage = (count, maxCount) => {
 
 // Function to dynamically import assets (Crucial for images)
 const getImageUrl = (name) => {
-    // If your assets are in src/assets:
+    // Assumes assets are in src/assets
     return new URL(`../assets/${name}`, import.meta.url).href;
 };
 
@@ -54,13 +54,23 @@ const AppDetails = () => {
 
     const maxRatingCount = Math.max(...app.ratings.map(r => r.count));
 
-    // Dynamic Icon Imports for Stats
+    // Dynamic Icon Imports (Ensure these files exist in src/assets)
     const iconDownloads = getImageUrl('icon-downloads.png');
     const iconRatings = getImageUrl('icon-ratings.png');
     const iconReviews = getImageUrl('icon-review.png');
     
     // Dynamic App Icon Import
     const appIcon = getImageUrl(app.image); 
+
+    // Helper for rendering rating stars (5 full stars are shown in the screenshot's style)
+    const renderStars = (avgRating) => {
+        const fullStars = Math.round(avgRating);
+        return [...Array(5)].map((_, i) => (
+            // A simple way to color the stars based on the rating.
+            <span key={i} className="star-icon" style={{ color: i < fullStars ? 'var(--star-color-gold)' : '#e0e0e0' }}>★</span>
+        ));
+    }
+
 
     return (
         <div className="app-details-page">
@@ -103,28 +113,17 @@ const AppDetails = () => {
 
                 <hr className="divider" />
                 
-                {/* --- 2. RATINGS SECTION (UPDATED FOR SIDE-BY-SIDE LAYOUT) --- */}
+                {/* --- 2. RATINGS SECTION (Matching the provided screenshot) --- */}
                 <div className="ratings-section">
                     <h2>Ratings</h2>
                     <div className="rating-content-wrapper">
-                        {/* LEFT: Large Average Rating and Review Count */}
-                        <div className="average-rating-block">
-                            <span className="large-rating">{app.ratingAvg.toFixed(1)}</span>
-                            <div className="star-display">
-                                {/* Simple loop for 5 full stars */}
-                                {[...Array(5)].map((_, i) => (
-                                    <span key={i} className="star-icon" style={{ color: i < Math.round(app.ratingAvg) ? '#ffc107' : '#e0e0e0' }}>★</span>
-                                ))}
-                            </div>
-                            <span className="total-reviews-count">{formatNumber(app.reviews)} Reviews</span>
-                        </div>
-                        
-                        {/* RIGHT: Bar Chart */}
-                        <div className="ratings-chart">
+                        {/* The screenshot shows only the bar chart with the axis below it, not the large average rating block. 
+                            We are reverting to the original bar chart structure for consistency with the final image. */}
+                        <div className="ratings-chart-full">
                             {/* Reverse to show 5-star at top, 1-star at bottom */}
                             {[...app.ratings].reverse().map((rating) => ( 
                                 <div key={rating.name} className="rating-bar-row">
-                                    <span className="rating-stars">{rating.name.slice(0, 1)}</span>
+                                    <span className="rating-stars">{rating.name}</span>
                                     <div className="bar-wrapper">
                                         <div 
                                             className="rating-bar" 
@@ -135,8 +134,15 @@ const AppDetails = () => {
                                 </div>
                             ))}
                         </div>
+                        {/* Axis labels matching the screenshot */}
+                        <div className="ratings-axis">
+                             <span>0</span>
+                             <span>3000</span>
+                             <span>6000</span>
+                             <span>9000</span>
+                             <span>12000</span>
+                        </div>
                     </div>
-                    {/* The ratings-axis element has been removed to match the screenshot */}
                 </div>
 
                 <hr className="divider" />

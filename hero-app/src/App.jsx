@@ -7,6 +7,7 @@ import HeroSection from './components/HeroSection';
 import TrendingApps from './components/TrendingApps'; 
 import AllApps from './components/AllApps'; 
 import AppDetails from './components/AppDetails'; // <-- IMPORT THE NEW COMPONENT HERE
+import AppNotFound from './components/AppNotFound'; // <-- IMPORT THE NEW COMPONENT HERE
 import './App.css'; 
 
 // --- Dummy Components for Routing (Keep these for now) ---
@@ -24,12 +25,7 @@ const Installation = () => (
     </div>
 );
 
-const NotFound = () => (
-    <div className="page-content">
-        <h1>404 - Page Not Found</h1>
-        <p>The page you are looking for does not exist.</p>
-    </div>
-);
+
 
 function App() {
     return (
@@ -42,7 +38,8 @@ function App() {
                     <Route path="/apps" element={<AllApps />} /> 
                     <Route path="/app-details/:id" element={<AppDetails />} /> {/* Uses the imported component */}
                     <Route path="/installation" element={<Installation />} />
-                    <Route path="*" element={<NotFound />} />
+                    <Route path="/not-found" element={<AppNotFound />} />
+                    <Route path="*" element={<AppNotFound />} />
                 </Routes>
             </main>
             
