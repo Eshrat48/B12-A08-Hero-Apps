@@ -1,5 +1,4 @@
 import React from 'react';
-import './AppCard.css'; 
 
 import downloadIcon from '../assets/icon-downloads.png';
 import ratingIcon from '../assets/icon-ratings.png';

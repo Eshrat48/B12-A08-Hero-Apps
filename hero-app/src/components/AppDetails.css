@@ -1,0 +1,275 @@
+/* src/pages/AppDetails.css */
+
+.app-details-page {
+    display: flex;
+    justify-content: center;
+    padding: 40px 20px;
+    min-height: 100vh;
+}
+
+.details-container {
+    max-width: 1000px; /* A fixed width for the content column */
+    margin: 0 auto;
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.divider {
+    border: none;
+    border-top: 1px solid #eee;
+    margin: 40px 0;
+}
+
+/* --- 1. HEADER SECTION --- */
+.details-header-section {
+    display: flex;
+    gap: 30px;
+    align-items: flex-start;
+}
+
+.icon-wrapper {
+    flex-shrink: 0;
+    width: 120px;
+    height: 120px;
+    background-color: #e0e0e0; /* Placeholder color */
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.details-app-icon {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.title-and-info h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #1a202c;
+    margin: 0 0 5px 0;
+}
+
+.developer-name {
+    font-size: 1rem;
+    color: #6b7280;
+    margin-bottom: 20px;
+}
+
+/* Stats Row */
+.stats-row {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 25px;
+}
+
+.stat-item {
+    text-align: center;
+}
+
+.stat-value {
+    display: block;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #9F62F2; /* Primary purple color */
+}
+
+.stat-label {
+    display: block;
+    font-size: 0.9rem;
+    color: #6b7280;
+    margin-top: 2px;
+}
+
+/* Install Button */
+.install-button {
+    background-color: #00bf8a; /* Green install button color */
+    color: white;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.install-button:hover {
+    background-color: #00a377;
+}
+
+
+/* --- 2. RATINGS SECTION --- */
+.ratings-section h2 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: var(--text-dark);
+    margin-bottom: 20px;
+    text-align: left; /* Aligned left per screenshot */
+}
+
+.rating-content-wrapper {
+    display: flex;
+    gap: 30px;
+    align-items: flex-start;
+}
+
+.average-rating-block {
+    flex-shrink: 0;
+    width: 120px;
+    text-align: center;
+    padding-top: 5px; 
+}
+
+.large-rating {
+    font-size: 3.5rem;
+    font-weight: 800;
+    color: var(--text-dark);
+    line-height: 1;
+    margin-bottom: 5px;
+}
+
+.star-display {
+    margin-bottom: 5px;
+    /* Ensure stars are colored gold */
+    color: var(--star-color-gold);
+}
+
+.star-icon {
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+}
+
+.total-reviews-count {
+    font-size: 0.85rem;
+    color: var(--text-light);
+}
+
+.ratings-chart {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 5px 0;
+}
+
+.rating-bar-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.rating-stars {
+    width: 70px; /* Fixed width for 'X star' text */
+    font-size: 0.95rem;
+    color: #6b7280;
+    flex-shrink: 0;
+}
+
+.bar-wrapper {
+    flex-grow: 1;
+    height: 10px;
+    background-color: #f3f4f6;
+    border-radius: 5px;
+    margin: 0 15px;
+    overflow: hidden;
+}
+
+.rating-bar {
+    height: 100%;
+    background-color: #ff9933; /* Orange color for rating bars */
+    border-radius: 5px;
+    transition: width 0.5s ease-out;
+}
+
+.rating-count {
+    font-size: 0.95rem;
+    color: var(--text-light);
+    width: 60px; /* Fixed width for the count number */
+    text-align: left;
+    flex-shrink: 0;
+}
+
+/* --- 3. Description Section --- */
+
+.description-section {
+    padding-top: 15px;
+}
+
+.description-section h2 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: var(--text-dark);
+    margin-bottom: 20px;
+    text-align: left; /* Aligned left per screenshot */
+}
+
+.description-content {
+    /* Ensures the entire text block aligns left */
+    max-width: 100%; 
+    margin: 0; 
+    color: var(--text-medium);
+    line-height: 1.6;
+}
+
+.description-paragraph {
+    text-align: left; 
+    margin-bottom: 18px; /* Adds space between paragraphs */
+}
+
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 768px) {
+    .details-container {
+        padding: 20px;
+        margin: 0 15px;
+    }
+    
+    .details-header-section {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .title-and-info {
+        width: 100%;
+        text-align: center;
+    }
+
+    .stats-row {
+        justify-content: space-around;
+        gap: 15px;
+        width: 100%;
+        margin: 20px 0;
+    }
+    
+    .stat-item {
+        flex: 1;
+    }
+
+    .install-button {
+        width: 80%;
+        max-width: 300px;
+    }
+
+    .ratings-chart {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 500px) {
+    .icon-wrapper {
+        width: 100px;
+        height: 100px;
+    }
+
+    .details-header-section h1 {
+        font-size: 1.7rem;
+    }
+    
+    .stat-value {
+        font-size: 1.3rem;
+    }
+}
