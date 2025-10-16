@@ -219,56 +219,141 @@
     margin-bottom: 18px; 
 }
 
-/* --- Responsive Adjustments --- */
-@media (max-width: 768px) {
+@media screen and (max-width: 1024px) {
     .details-container {
-        padding: 20px;
-        margin: 0 15px;
+        padding: 30px 20px;
     }
-    
-    .details-header-section {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
+    .title-and-info h1 {
+        font-size: 26px;
     }
-    
-    .title-and-info {
-        width: 100%;
-        text-align: center;
+    .stat-value {
+        font-size: 32px;
     }
-
-    .stats-row {
-        justify-content: space-around;
-        gap: 15px;
-        width: 100%;
-        margin: 20px 0;
+    .stat-label {
+        font-size: 16px;
     }
-    
-    .stat-item {
-        flex: 1;
-    }
-
     .install-button {
-        width: 80%;
-        max-width: 300px;
+        padding: 10px 25px;
+        font-size: 16px;
     }
-
-    .ratings-chart {
-        max-width: 100%;
+    .ratings-section h2,
+    .description-section h2 {
+        font-size: 20px;
+    }
+    .description-content {
+        font-size: 15px;
     }
 }
 
-@media (max-width: 500px) {
+@media screen and (max-width: 768px) {
+    .app-details-page {
+        padding: 30px 15px;
+        min-height: auto;
+    }
+    .details-container {
+        padding: 25px 15px;
+    }
+    .details-header-section {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
     .icon-wrapper {
         width: 100px;
         height: 100px;
     }
-
-    .details-header-section h1 {
-        font-size: 1.7rem;
+    .title-and-info h1 {
+        font-size: 22px;
+        text-align: center;
     }
-    
+    .developer-name {
+        text-align: center;
+    }
+    .stats-row {
+        justify-content: center;
+        gap: 20px;
+        flex-wrap: wrap;
+    }
     .stat-value {
-        font-size: 1.3rem;
+        font-size: 28px;
+    }
+    .stat-label {
+        font-size: 14px;
+    }
+    .install-button {
+        width: 100%;
+        padding: 12px 0;
+        font-size: 16px;
+    }
+    .ratings-section h2,
+    .description-section h2 {
+        font-size: 18px;
+        text-align: center;
+    }
+    .description-content {
+        font-size: 14px;
+        text-align: center;
+    }
+    .rating-content-wrapper {
+        flex-direction: column;
+        align-items: center;
+        gap: 25px;
+    }
+    .average-rating-block {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .icon-wrapper {
+        width: 80px;
+        height: 80px;
+    }
+    .title-and-info h1 {
+        font-size: 18px;
+    }
+    .stat-value {
+        font-size: 24px;
+    }
+    .stat-label {
+        font-size: 12px;
+    }
+    .install-button {
+        font-size: 14px;
+        padding: 10px 0;
+    }
+    .ratings-section h2,
+    .description-section h2 {
+        font-size: 16px;
+    }
+    .description-content {
+        font-size: 13px;
+    }
+}
+
+@media screen and (max-width: 280px) {
+    .icon-wrapper {
+        width: 70px;
+        height: 70px;
+    }
+    .title-and-info h1 {
+        font-size: 16px;
+    }
+    .stat-value {
+        font-size: 20px;
+    }
+    .stat-label {
+        font-size: 11px;
+    }
+    .install-button {
+        font-size: 13px;
+        padding: 8px 0;
+    }
+    .ratings-section h2,
+    .description-section h2 {
+        font-size: 14px;
+    }
+    .description-content {
+        font-size: 12px;
     }
 }

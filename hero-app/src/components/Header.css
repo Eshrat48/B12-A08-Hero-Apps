@@ -85,3 +85,78 @@
     font-size: 18px; 
     line-height: 1; 
 }
+
+@media screen and (max-width: 1024px) {
+    .header-container {
+        padding: 10px 20px;
+    }
+    .logo-text {
+        font-size: 15px;
+    }
+    .header-nav {
+        gap: 18px;
+    }
+    .nav-link, .contribute-button {
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 8px 16px;
+    }
+    .header-nav {
+        width: 100%;
+        flex-direction: column;
+        margin-top: 8px;
+        gap: 10px;
+    }
+    .nav-link, .contribute-button {
+        width: 100%;
+        text-align: left;
+        font-size: 14px;
+        padding: 10px 0;
+    }
+    .contribute-button {
+        width: auto;            
+        align-self: flex-end;   
+        margin-top: 8px;        
+        font-size: 14px;        
+        padding: 8px 14px;      
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .logo-image {
+        height: 30px;
+        margin-right: 4px;
+    }
+    .logo-text {
+        font-size: 13px;
+    }
+    .nav-link, .contribute-button {
+        font-size: 13px;
+        padding: 8px 0;
+    }
+     .contribute-button {
+        width: auto; 
+        min-width: 120px;       
+        font-size: 13px;
+        padding: 7px 12px;
+    }
+}
+
+@media screen and (max-width: 280px) {
+    .header-container {
+        padding: 6px 10px;
+    }
+    .logo-text {
+        display: none; 
+    }
+    .nav-link, .contribute-button {
+        font-size: 12px;
+    }
+    
+}

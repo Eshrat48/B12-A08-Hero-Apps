@@ -126,25 +126,30 @@
     background-color: #834fe8;
 }
 
-/* --- Responsive Adjustments --- */
-@media (max-width: 950px) {
+@media (max-width: 1024px) {
     .apps-grid {
         grid-template-columns: repeat(3, 1fr); 
-        max-width: 700px; 
-        gap: 20px;
+        max-width: 750px;
     }
 }
-@media (max-width: 700px) {
+@media (max-width: 768px) {
     .apps-grid {
         grid-template-columns: repeat(2, 1fr); 
+        max-width: 500px;
+        gap: 30px;
+    }
+}
+@media (max-width: 480px) {
+    .apps-grid {
+        grid-template-columns: 1fr; 
         max-width: 500px;
         gap: 20px;
     }
 }
-@media (max-width: 500px) {
+@media (max-width: 280px) {
     .apps-grid {
         grid-template-columns: 1fr; 
-        max-width: 350px;
+        max-width: 250px;
         padding: 0 10px;
     }
 }
