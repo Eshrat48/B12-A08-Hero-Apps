@@ -1,5 +1,3 @@
-/* src/pages/AppDetails.css */
-
 .app-details-page {
     display: flex;
     justify-content: center;
@@ -8,21 +6,18 @@
 }
 
 .details-container {
-    max-width: 1000px; /* A fixed width for the content column */
+    max-width: 1000px; 
     margin: 0 auto;
-    background-color: #ffffff;
     padding: 40px;
     border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
 }
 
 .divider {
     border: none;
-    border-top: 1px solid #eee;
+    border-top: 1px solid #001931;
     margin: 40px 0;
 }
 
-/* --- 1. HEADER SECTION --- */
 .details-header-section {
     display: flex;
     gap: 30px;
@@ -33,7 +28,7 @@
     flex-shrink: 0;
     width: 120px;
     height: 120px;
-    background-color: #e0e0e0; /* Placeholder color */
+    background-color: #e0e0e0; 
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -46,9 +41,9 @@
 }
 
 .title-and-info h1 {
-    font-size: 2rem;
-    font-weight: 700;
-    color: #1a202c;
+    font-size: 30px;
+    font-weight: 600;
+    color: #001931;
     margin: 0 0 5px 0;
 }
 
@@ -58,7 +53,11 @@
     margin-bottom: 20px;
 }
 
-/* Stats Row */
+.developer{
+    font-weight: 600;
+    color: #9F62F2;
+}
+
 .stats-row {
     display: flex;
     gap: 30px;
@@ -71,27 +70,26 @@
 
 .stat-value {
     display: block;
-    font-size: 1.5rem;
+    font-size: 40px;
     font-weight: 700;
-    color: #9F62F2; /* Primary purple color */
+    color: #001931; 
 }
 
 .stat-label {
     display: block;
-    font-size: 0.9rem;
-    color: #6b7280;
-    margin-top: 2px;
+    font-size: 18px;
+    color: #001931 !important;
+    margin-top: 10px;
 }
 
-/* Install Button */
 .install-button {
-    background-color: #00bf8a; /* Green install button color */
-    color: white;
+    background-color: #00D390; 
+    color: #FFFFFF;
     padding: 12px 30px;
     border: none;
     border-radius: 8px;
-    font-size: 1rem;
-    font-weight: 600;
+    font-size: 18px;
+    font-weight: 500;
     cursor: pointer;
     transition: background-color 0.2s;
 }
@@ -100,14 +98,12 @@
     background-color: #00a377;
 }
 
-
-/* --- 2. RATINGS SECTION --- */
 .ratings-section h2 {
-    font-size: 1.8rem;
+    font-size: 24px;
     font-weight: 600;
-    color: var(--text-dark);
+    color: #001931;
     margin-bottom: 20px;
-    text-align: left; /* Aligned left per screenshot */
+    text-align: left; 
 }
 
 .rating-content-wrapper {
@@ -133,7 +129,6 @@
 
 .star-display {
     margin-bottom: 5px;
-    /* Ensure stars are colored gold */
     color: var(--star-color-gold);
 }
 
@@ -147,39 +142,46 @@
     color: var(--text-light);
 }
 
-.ratings-chart {
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-    padding: 5px 0;
+.ratings-barchart {
+  width: 100%;
+  padding-top: 10px;
 }
 
 .rating-bar-row {
-    display: flex;
-    align-items: center;
-    margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 16px;
 }
 
 .rating-stars {
-    width: 70px; /* Fixed width for 'X star' text */
-    font-size: 0.95rem;
-    color: #6b7280;
-    flex-shrink: 0;
+  width: 60px;
+  font-size: 1rem;
+  color: #60646a;
 }
 
 .bar-wrapper {
-    flex-grow: 1;
-    height: 10px;
-    background-color: #f3f4f6;
-    border-radius: 5px;
-    margin: 0 15px;
-    overflow: hidden;
+  flex: 1;
+  height: 17px;
+  background: #f3f4f6;
+  border-radius: 9px;
+  margin: 0 22px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.ratings-axis {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 4px;
+  padding-left: 60px;
+  color: #878787;
+  font-size: 1rem;
 }
 
 .rating-bar {
     height: 100%;
-    background-color: #ff9933; /* Orange color for rating bars */
+    background-color: #FF8811; 
     border-radius: 5px;
     transition: width 0.5s ease-out;
 }
@@ -187,38 +189,35 @@
 .rating-count {
     font-size: 0.95rem;
     color: var(--text-light);
-    width: 60px; /* Fixed width for the count number */
+    width: 60px; 
     text-align: left;
     flex-shrink: 0;
 }
-
-/* --- 3. Description Section --- */
 
 .description-section {
     padding-top: 15px;
 }
 
 .description-section h2 {
-    font-size: 1.8rem;
+    font-size: 24px;
     font-weight: 600;
-    color: var(--text-dark);
+    color: #001931;
     margin-bottom: 20px;
-    text-align: left; /* Aligned left per screenshot */
+    text-align: left; 
 }
 
 .description-content {
-    /* Ensures the entire text block aligns left */
     max-width: 100%; 
+    font-size: 16px;
     margin: 0; 
-    color: var(--text-medium);
+    color: #627382;
     line-height: 1.6;
 }
 
 .description-paragraph {
     text-align: left; 
-    margin-bottom: 18px; /* Adds space between paragraphs */
+    margin-bottom: 18px; 
 }
-
 
 /* --- Responsive Adjustments --- */
 @media (max-width: 768px) {

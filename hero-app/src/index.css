@@ -6,8 +6,8 @@
 }
 
 body {
-  margin: 0; /* REMOVES default browser margin */
-  padding: 0; /* REMOVES default browser padding */
-  min-width: 100vw; /* Ensures body spans entire viewport width */
+  margin: 0; 
+  padding: 0; 
+  min-width: 100vw; 
   background-color: #f3f2f2;
 }

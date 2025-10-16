@@ -1,5 +1,3 @@
-// src/components/Header.jsx
-
 import React from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import './Header.css'; 
@@ -38,15 +36,15 @@ const Header = () => {
           Apps
         </NavLink>
         
-        <NavLink 
-          to="/installation" 
-          className={({ isActive }) => 
+        <NavLink
+          to="/my-installation"
+          className={({ isActive }) =>
             isActive ? 'nav-link active' : 'nav-link'
-          }
-        >
-          Installation
+        }
+      >
+        Installation 
         </NavLink>
-      </nav>
+        </nav>
 
       <a 
         href={githubLink} 

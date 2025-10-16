@@ -1,0 +1,153 @@
+.my-installation-page {
+  min-height: 100vh;
+  padding-top: 40px;
+}
+
+.my-installation-content {
+  max-width: 900px;
+  margin: 0 auto;
+  padding-bottom: 35px;
+}
+
+h1 {
+  text-align: center;
+  font-size: 45px;
+  font-weight: 700;
+  margin-bottom: 2px;
+  color: #001931;
+  letter-spacing: 0.02em;
+}
+
+.subtitle-text {
+  text-align: center;
+  font-size: 18px;
+  color: #627382;
+  margin-top: 20px;
+  margin-bottom: 42px;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+}
+
+.install-controls {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 18px;
+  font-size: 1.08rem;
+  color: #001931;
+  font-weight: 600;
+}
+
+.installed-apps-list {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.installed-app-card {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  background: #fff;
+  border-radius: 13px;
+  box-shadow: 0 2px 12px #ececec;
+  padding: 12px 18px;
+  min-height: 60px;
+}
+
+.app-card-imagebox {
+  width: 45px;
+  height: 45px;
+  border-radius: 7px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 13px;
+}
+
+.app-avatar {
+  width: 42px;
+  height: 42px;
+  border-radius: 7px;
+  object-fit: cover;
+}
+
+.app-main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.app-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: #22223a;
+  margin-bottom: 2px;
+}
+
+.app-meta-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.meta-icon {
+  width: 15px;
+  height: 15px;
+  margin-right: 3px;
+}
+
+.app-meta-downloads {
+  font-size: 0.98rem;
+  color: #23c2a0;
+  font-weight: 600;
+}
+
+.app-meta-size {
+  font-size: 0.95rem;
+  color: #c2b100;
+  font-weight: 600;
+  margin-left: 6px;
+}
+
+.uninstall-btn {
+  background: #21c787;
+  color: #fff;
+  font-weight: 600;
+  font-size: 0.97rem;
+  border: none;
+  border-radius: 6px;
+  padding: 7px 27px;
+  cursor: pointer;
+  margin-left: auto;
+  box-shadow: 0 2px 7px #daf8e5;
+  transition: background 0.2s;
+}
+
+.uninstall-btn:hover {
+  background: #18996d;
+}
+
+.toast {
+  position: fixed;
+  right: 23px;
+  bottom: 38px;
+  background: #29b94c;
+  color: #fff;
+  padding: 15px 32px;
+  border-radius: 7px;
+  font-weight: 500;
+  z-index: 99999;
+  animation: fadeInOut 2s;
+}
+
+@keyframes fadeInOut {
+  from { opacity: 0; }
+  10% { opacity: 1; }
+  90% { opacity: 1; }
+  to { opacity: 0; }
+}

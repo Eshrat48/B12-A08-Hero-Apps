@@ -15,12 +15,10 @@ const AppCard = ({ app, navigate, formatDownloads }) => {
             <div className="app-content">
                 <div className="app-name">{app.title}</div>
                 <div className="app-stats">
-                    {/* DOWNLOAD STAT */}
                     <div className="mini-tag downloads">
                         <img src={downloadIcon} alt="Downloads" className="downloads-icon" />
                         {formatDownloads(app.downloads)}
                     </div>
-                    {/* RATING STAT */}
                     <div className="mini-tag rating">
                         <img src={ratingIcon} alt="Rating" className="rating-icon" />
                         {app.ratingAvg.toFixed(1)}

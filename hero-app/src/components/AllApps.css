@@ -1,12 +1,9 @@
-/* All Apps Page Styles */
-
 .all-apps-container {
-    padding: 80px 20px;
-    min-height: 100vh;
-    background-color: #f8f8f8; 
+    padding: 20px 20px;
+    margin: auto 40px;
+    text-align: center;
 }
 
-/* --- Title Section --- */
 .all-apps-header {
     text-align: center;
     margin-bottom: 50px;
@@ -20,13 +17,11 @@
 }
 
 .all-apps-subtitle {
-    font-size: 1rem;
+    font-size: 18px;
     color: #627382;
 }
 
-/* --- Search and States Bar --- */
 .search-and-stats-bar {
-    max-width: 1200px;
     margin: 0 auto 40px auto;
     display: flex;
     justify-content: space-between;
@@ -35,22 +30,22 @@
 }
 
 .app-count-display {
-    font-size: 1.1rem;
-    color: #627382;
+    font-size: 22px;
+    color: #001931;
     font-weight: 500;
 }
 
 .count-number {
-    font-size: 1.3rem;
-    font-weight: 700;
+    font-size: 22px;
+    font-weight: 500;
     color: #001931;
     margin-right: 5px;
 }
 
 .search-bar-wrapper {
     position: relative;
-    width: 100%;
-    max-width: 350px;
+    max-width: 200px;
+    margin-right: 80px;
 }
 
 .app-search-input {
@@ -80,14 +75,12 @@
 .apps-grid-full {
     display: grid;
     grid-template-columns: repeat(4, 1fr); 
-    max-width: 1200px;
+    max-width: 980px;
     margin: 0 auto;
     padding: 0 10px;
-    gap: 30px;
+    gap: 40px;
 }
 
-
-/* --- App Card Styling (IDENTICAL to TrendingApps.css) --- */
 .app-card {
     background-color: #ffffff; 
     padding: 15px;
@@ -107,17 +100,16 @@
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
 }
 
-/* TALL Aspect Ratio */
 .app-image-placeholder {
     width: 100%;
     height: 200px; 
-    background-color: #e0e0e0;
+    background-color: #ffffff;
     border-radius: 8px;
     margin-bottom: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
-    overflow: hidden;
+    overflow: hidden; 
 }
 
 .app-icon {
@@ -132,9 +124,9 @@
 }
 
 .app-name {
-    font-size: 1.0rem; 
-    font-weight: 600;
-    color: #333;
+    font-size: 16px; 
+    font-weight: 400;
+    color: #001931;
     margin: 5px 0 10px 0; 
     word-break: break-word;
 }
@@ -148,14 +140,11 @@
 
 .mini-tag {
     display: flex;
-    align-items: center;
-    font-size: 0.85rem;
+    font-size: 14px;
     font-weight: 600;
-    color: #555;
     margin: 0 8px; 
 }
 
-/* Consistent Mini Tag Colors */
 .mini-tag.downloads { 
     background: #e1ffe1;
     color: #008000;
@@ -174,9 +163,9 @@
     width: 14px; 
     height: 14px; 
     margin-right: 5px;
+
 }
 
-/* No App Found Message */
 .no-app-found {
     grid-column: 1 / -1; 
     text-align: center;
@@ -186,32 +175,4 @@
     background-color: #fff;
     border-radius: 8px;
     margin-top: 30px;
-}
-
-/* --- Responsive Adjustments --- */
-@media (max-width: 1000px) {
-    .apps-grid-full {
-        grid-template-columns: repeat(3, 1fr); 
-        gap: 20px;
-    }
-}
-@media (max-width: 768px) {
-    .search-and-stats-bar {
-        flex-direction: column;
-        gap: 20px;
-    }
-    .search-bar-wrapper {
-        max-width: 100%; 
-    }
-    .apps-grid-full {
-        grid-template-columns: repeat(2, 1fr); 
-    }
-}
-@media (max-width: 500px) {
-    .apps-grid-full {
-        grid-template-columns: 1fr; 
-    }
-    .all-apps-title {
-        font-size: 2rem;
-    }
 }
